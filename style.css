@@ -1,3 +1,4 @@
+/*CSS Reset END*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -41,23 +42,18 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-/*CSS Reset END*/
-*{
+/* Utility */
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+*, ::after, ::before{
 	box-sizing: border-box;
-}
-
-header{
-	height: 88px;
-}
-.logo-area img{
-	width: 218px;
-}
-.section{
-	height: 100vh;
+	font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
 }
 
 .d-flex{
 	display: flex;
+}
+.flex-justify-center{
+	justify-content: center;
 }
 .flex-justify-between{
 	justify-content: space-between;
@@ -65,64 +61,227 @@ header{
 .flex-align-center{
 	align-items: center;
 }
+.flex-align-bottom{
+	align-items:flex-end;
+}
 .flex-wrap{
 	flex-wrap: wrap;
 }
-
-h1{
-	font: normal normal bold 18px/26px Noto Sans TC;
-	letter-spacing: 0px;
-	color: #56C4C5;
+.flex-wrap-reverse
+{
+	flex-wrap: wrap-reverse;
 }
-h2{
-	font: normal normal bold 48px/70px Noto Sans TC;
-	letter-spacing: 0px;
-	color: #221E1F;
-}
-h3{
-	font: normal normal bold 32px/46px Noto Sans TC;
-	letter-spacing: 0px;
-	color: #221E1F;
-	text-align:center;
-}
-h4{
-	font: normal normal normal 20px/29px Noto Sans TC;
-	letter-spacing: 0px;
-	color: #221E1F;
-}
-.wrap{
-	max-width: 1085px;
-	margin: 0 auto;
-}
-.benner-man-img{
-	background-image: url(./img/home.svg);
-	width: 532px;
-	height: 534px;
+.flex-row{
+	flex-direction: column;
 }
 
 .btn{
 	cursor: pointer;
 	text-decoration: none;
 	display: inline-block;
-    font-weight: 400;
-    color: #212529;
     text-align: center;
     vertical-align: middle;
     background-color: transparent;
-    border: 1px solid transparent;
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
     border-radius: .25rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+	padding : 12px;
+	border-radius: 27px;
+}
+
+.btn-primary{
+	color: #fff;
+    background-color: #56C4C5;
+}
+
+.btn-primary:hover{
+    background-color: #B8E6E7;
+}
+.btn-secondary{
+	color: #fff;
+	background: #FF5D50;
+}
+.btn-secondary:hover{
+	background: #ff7b72;
 }
 
 .m-auto{
 	margin: 0 auto;
 }
+.mt-374{
+	margin-top: 374px;
+}
+.mt-100{
+	margin-top: 100px;
+}
+.mt-48{
+	margin-top: 48px;
+}
+.mt-40{
+	margin-top: 40px;
+}
+.mt-24{
+	margin-top:24px
+}
+.mt-20{
+	margin-top: 20px;
+}
+.mt-16{
+	margin-top: 16px;
+}
+.mb-16{
+	margin-bottom: 16px;
+}
+.mb-40{
+	margin-bottom: 40px;
+}
+.pt-16{
+	padding-top : 16px;
+}
+
+.ft-16{
+	font-size: 16px;
+}
+.font-weight-bold
+{
+	font-weight: bold;
+}
+
+.w-140{
+	width: 140px;
+}
+.w-130{
+	width: 130px;
+}
+
+.text-primary{
+	color:#221E1F;
+}
+.text-secondary{
+	color: #56C4C5;
+}
+
+.text-align-center{
+	text-align: center;
+}
+
+/* */
+header{
+	height: 88px;
+	
+}
+
+
+
+
+h1{
+	font: normal normal bold 18px/26px Noto Sans TC;
+	color: #56C4C5;
+}
+h2{
+	font: normal normal bold 48px/70px Noto Sans TC;
+	color: #221E1F;
+}
+h3{
+	font: normal normal bold 32px/46px Noto Sans TC;
+
+	color: #221E1F;
+}
+h4{
+	font: normal normal normal 20px/29px Noto Sans TC;
+	color: #221E1F;
+}
+p{
+	line-height: 1.5rem;
+}
+
+.go-top{
+	position: fixed;
+	cursor: pointer;
+	text-decoration: none;
+	display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+	bottom: 24px;
+	right: 8px;
+	width: 70px;
+	height:70px;
+	background-color: #56C4C5;
+	color:#FFF;
+	border-radius: 50%;
+	z-index: 5;
+	font-size: 24px;
+	line-height: 70px;
+}
+
+.wrap{
+	max-width: 1085px;
+	margin: 0 auto;
+}
+.logo-area img{
+	width: 218px;
+}
+.section{
+	padding-top: 30px;
+	padding-bottom: 120px;
+}
+.banner-bg{
+	width: 851px;
+	height: 768px;
+	background-image: url(./img/bg_home.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: absolute;
+	right: 0;
+	z-index: -1;
+}
+.banner-man-img{
+	width: 534px;
+	height: 534px;
+	background-image: url(./img/home.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
 .platform-img{
 	width: 90px;
 	height: 90px;
+}
+.bg-ball-1{
+	position: absolute;
+	top: 590px;
+	left: 0px;
+	background-image: url(./img/ball01.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: -180px 0px;
+	width: 360px;
+	height: 360px;
+	z-index: -1;
+}
+.bg-ball-2{
+	position: absolute;
+	top: 1700px;
+	right: 0px;
+	background-image: url(./img/ball02.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 200px;
+	height: 310px;
+	z-index: -1;
+}
+.bg-ball-3{
+	position: absolute;
+	top: 2670px;
+	left: 50px;
+	background-image: url(./img/ball03.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 150px;
+	height: 150px;
+	z-index: -1;
 }
 .platform-explain{
 	width: 224px;
@@ -138,43 +297,20 @@ h4{
 	letter-spacing: 0px;
 	color: #747474;
 }
-.text-align-center{
-	text-align: center;
-}
 .role-card{
-	width: 260px;
+	width: 24%;
 	box-shadow: 0px 2px 10px #00000014;
 	border-radius: 12px;
+	background-color: white;
 }
 .role-card img{
-	border-radius: 12px 12px 0  0;
-	width: 260px;
-	height: 260px;
+	border-radius: 12px 12px 0px 0px;
 }
-.ft-16{
-	font-size: 16px;
-}
-.text-primary{
- 	color:#221E1F;
-}
-.text-secondary{
-	color: #56C4C5;
-}
+
 .brand-traffic{
 	width: 395px;
 }
-.footer{
-	background-image: url(img/home_footer.svg);
-	
-	background-repeat: no-repeat;
-	background-size: cover;
-	
-	height: 503px;
-}
-.footer-text{
-	height: 56px;
-	background: #F5F5F5
-}
+
 .skills
 {
 	max-width: 508px;
@@ -184,6 +320,7 @@ h4{
 	box-shadow: 0px 2px 10px #00000014;
 	border-radius: 12px;
 	padding: 32px;
+	background-color: white;
 }
 .skill-card .icon{
 	width: 86px;
@@ -197,4 +334,168 @@ h4{
 .skill-card .icon img{
 	width: 52px;
 	height: 52px;
+}
+.recommend{
+	position: relative;
+	width: 33.33%;
+	padding: 24px 32px;
+	box-shadow: 0px 2px 10px #00000014;
+	border-radius: 12px;
+	background-color: white;
+}
+.recommend img{
+	position:absolute;
+	top: -50px;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	box-shadow: 0px 2px 10px #00000014;
+}
+.line{
+	height: 1px;
+	border-bottom: 1px solid #00000014 ;
+	
+}
+.star{
+	width: 120px;
+}
+.star-icon
+{
+	background-image: url(img/icon_star.svg);
+	width: 16px;
+	height: 16px;
+	background-size:contain;
+}
+
+.footer{
+	background-image: url(img/home_footer.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	
+	height: 504px;
+	padding-top: 250px;
+}
+.footer-text{
+	height: 56px;
+	background: #F5F5F5
+}
+@media(max-width:767px) {
+	/*utility*/
+	.d-none-sm{
+		display: none;
+	}
+	.m-sm-auto{
+		margin: 0 auto;
+	}
+	.mt-sm-100{
+		margin-top: 100px;
+	}
+	.mt-sm-40{
+		margin-top: 40px;
+	}
+	.mt-sm-32{
+		margin-top: 32px;
+	}
+	.mt-sm-24{
+		margin-top:24px
+	}
+	.mt-sm-20{
+		margin-top: 20px;
+	}
+	.mt-sm-16{
+		margin-top: 16px;
+	}
+	.mb-sm-16{
+		margin-bottom: 16px;
+	}
+	.mb-sm-40{
+		margin-bottom: 40px;
+	}
+	.pt-sm-6{
+		padding-top:6px;
+	}
+	.pb-sm-6{
+		padding-bottom:6px;
+	}
+	.p-sm-0{
+		padding:0px;
+	}
+	.flex-align-center-sm{
+		align-items: center;
+	}
+	.flex-align-center-sm{
+		align-items: center;
+	}
+	/**/
+	header{
+		height: 72px;
+		width: 100%;
+		border-bottom: 2px solid #F6CB52;
+	}
+	.banner-bg{
+		background-image: url(./img/bg_home_sm.svg);
+		width: 334px;
+		height: 245px;
+		top: 400px;
+		right: calc((100vw-335px)/2);
+	}
+	h1{
+		font: normal normal bold 16px/24px Noto Sans TC;
+	}
+	h2{
+		font: normal normal bold 32px/46px Noto Sans TC;
+	}
+	h3{
+		font:normal normal bold 28px/40px Noto Sans TC;
+	}
+	h4{
+		font: normal normal normal 16px/24px Noto Sans TC;
+	}
+	.wrap {
+        width: 335px;
+    }
+	.go-top{
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
+		font-size: 14px;
+	}
+	.bg-ball-1{
+		width: 126px;
+		height: 126px;
+		top : 720px;
+		background-position: -60px 0;
+	}
+	.bg-ball-2{
+		width: 135px;
+		height: 135px;
+		top : 3250px;
+		background-position: 65px 0;
+	}
+	.bg-ball-3{
+		width: 153px;
+		height: 153px;
+		top : 5200px;
+		left: 0px;
+		background-position: -75px 0;
+	}
+	.logo-area img{
+		width: 130px;
+	}
+	.banner-man-img{
+		width: 304px;
+		height: 304px;
+	}
+	.role-card{
+		width: 80%;
+	}
+	.recommend{
+		width: 100%;
+	}
+	.footer{
+		height: 461px;
+		background-image: url("img/footer_sm.svg");
+	}
+
+
 }
